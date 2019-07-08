@@ -5,54 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="../css/Exercicio3-calculadora.css">
+
+
+    <script type="text/javascript">
+      function btnUm(){
+        var num1 = document.calculadoraForm.num1.value;
+        document.calculadoraForm.saida.value = num1;
+      }
+
+    </script>
+      
 </head>
 <body>
         <div class="fundo">
-                <div class="calculadora">
-                  <div id="saida"><p>0</p></div>
-                  <section class="botoes botoes-auto-flow">
-                        <div class="teclas"><input type="button" value="%" name="btnPorcentagem"></p></div>
-                        <div class="teclas"><p>√</p></div>
-                        <div class="teclas"><p>x²</p></div>
-                        <div class="teclas"><p>1/x</p></div>
-                  </section>
-                  <section class="botoes botoes-auto-flow">
-                    <div class="teclas"><p>CE</p></div>
-                    <div class="teclas"><p>C</p></div>
-                    <div class="teclas"><p>(X)</p></div>
-                    <div class="teclas"><p>÷</p></div>
-                
-                  </section>
-                  <section class="botoes botoes-auto-flow">
-                    <div class="teclas numeros"><p>7</p></div>
-                    <div class="teclas numeros"><p>8</p></div>
-                    <div class="teclas numeros"><p>9</p></div>
-                    <div class="teclas"><p>x</p></div>
-                
-                  </section>
-                  <section class="botoes botoes-auto-flow">
-                    <div class="teclas numeros"><p>4</p></div>
-                    <div class="teclas numeros"><p>5</p></div>
-                    <div class="teclas numeros"><p>6</p></div>
-                    <div class="teclas"><p>-</p></div>
-                
-                  </section>
-                  <section class="botoes botoes-auto-flow">
-                    <div class="teclas numeros"><p>1</p></div>
-                    <div class="teclas numeros"><p>2</p></div>
-                    <div class="teclas numeros"><p>3</p></div>
-                    <div class="teclas"><p>+</p></div>
-                
-                  </section>
-                  <section class="botoes botoes-auto-flow">
-                    <div class="teclas"><p> </p></div>
-                    <div class="teclas"><p>0</p></div>
-                    <div class="teclas"><p>,</p></div>
-                    <div class="teclas"><p>=</p></div>
-                
-                  </section>
-                </div>
+          <div class="calculadora">
+
+            <form name="calculadoraForm" method="post" action="">
+              <input type="text" required="required" name="saida" id="saida" pattern="[0-9]+$" >
+              <section class="botoes botoes-auto-flow">
+                <input class="teclas" type="button" value="%" name="btnPorcentagem">
+                <input class="teclas" type="button" value="√" name="btnRaiz">
+                <input class="teclas" type="button" value="x²" name="btnXquadrado">
+                <input class="teclas" type="button" value="1/x" name="btn1x">
+              </section>
+              <section class="botoes botoes-auto-flow">
+                <input class="teclas" type="button" value="CE" name="btnCE">
+                <input class="teclas" type="button" value="C" name="btnC">
+                <input class="teclas" type="button" value="(X)" name="btnApagar">
+                <input class="teclas" type="button" value="÷" name="btnDividir">       
+              </section>
+              <section class="botoes botoes-auto-flow">
+                <input class="teclas numeros" type="button" value="7" name="btnSete">
+                <input class="teclas numeros" type="button" value="8" name="btnOito">
+                <input class="teclas numeros" type="button" value="9" name="btnNove">
+                <input class="teclas" type="button" value="X" name="btnMultiplicar">            
+              </section>
+              <section class="botoes botoes-auto-flow">
+                <input class="teclas numeros" type="button" value="4" name="btnQuatro">
+                <input class="teclas numeros" type="button" value="5" name="btnCinco">
+                <input class="teclas numeros" type="button" value="6" name="btnSeis">
+                <input class="teclas" type="button" value="-" name="btnMultiplicar">          
+              </section>
+              <section class="botoes botoes-auto-flow">
+                <input class="teclas numeros" type="button" value="1" name="btnUm" onClick="btnUm()">
+                <input class="teclas numeros" type="button" value="2" name="btnDois">
+                <input class="teclas numeros" type="button" value="3" name="btnTrês">
+                <input class="teclas" type="button" value="+" name="btnMultiplicar">           
+              </section>
+              <section class="botoes botoes-auto-flow">
+                <input class="teclas" type="button" value=" " name="btnNd">
+                <input class="teclas" type="button" value="0" name="btnZero">
+                <input class="teclas" type="button" value="," name="btnVirgula">
+                <input class="teclas" type="button" value="=" name="btnIgualdade">         
+              </section>
+
+
+
+
+            </form>
+          </div>
 
          </div>
+         btnUm()
 </body>
 </html>
