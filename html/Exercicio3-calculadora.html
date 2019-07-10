@@ -8,10 +8,16 @@
 
 
     <script type="text/javascript">
-      function btnUm(){
-        var num1 = document.calculadoraForm.btnUm.value;
-        document.calculadoraForm.saida.value = num1;
+      var stringTela;
+      function n1(){
+        var num1 = document.getElementById("btnUm").value;
+        saida.value = saida.value + num1;
       }
+      var valorTecla;
+      function getTecla(tecla){
+        document.calculadoraForm.saida.value =  document.calculadoraForm.saida.value + tecla;
+      }
+    
 
     </script>
       
@@ -47,9 +53,9 @@
           <input class="teclas" type="button" value="-" name="btnMultiplicar">          
         </section>
         <section class="botoes botoes-auto-flow">
-          <input class="teclas numeros" type="button" value="1" name="btnUm" id="btnUm" onClick="btnUm()">
-          <input class="teclas numeros" type="button" value="2" name="btnDois">
-          <input class="teclas numeros" type="button" value="3" name="btnTrês">
+          <input class="teclas numeros" type="button" value="1" name="btnUm" id="btnUm" onClick="getTecla(document.calculadoraForm.btnUm.value)">
+          <input class="teclas numeros" type="button" value="2" name="btnDois" id="btnDois" onClick="getTecla(document.calculadoraForm.btnDois.value)">
+          <input class="teclas numeros" type="button" value="3" name="btnTres"  id="btnTres" onClick="getTecla(document.calculadoraForm.btnTres.value)">
           <input class="teclas" type="button" value="+" name="btnMultiplicar">           
         </section>
         <section class="botoes botoes-auto-flow">
@@ -58,14 +64,17 @@
           <input class="teclas" type="button" value="," name="btnVirgula">
           <input class="teclas" type="button" value="=" name="btnIgualdade">         
         </section>
-
-
-
-
       </form>
+      <script>
+        var teste = document.calculadoraForm.btnUm.value;
+        alert("teste" + teste);
+      </script>
     </div>
 
-         </div>
-   btnUm()
+  </div>
+
+
 </body>
+
+
 </html>
